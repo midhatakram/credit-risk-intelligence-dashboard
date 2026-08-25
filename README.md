@@ -2,7 +2,7 @@
 
 SQL Server + Power BI analysis of 1.79M+ loans, uncovering risk patterns in credit verification, debt-to-income, and portfolio exposure.
 
-![Executive Summary](executive-summary.png)
+![Executive Summary](screenshots/executive-summary%20(1).png)
 
 ## The Business Question
 
@@ -18,13 +18,13 @@ Of the $27.3B portfolio, $3.01B ended up charged off — a 10.71% default rate o
 
 Verified loans defaulted more than unverified ones — 14.91% vs 6.91%.
 
-![Verification Analysis](verification-chart.png)
+![Verification Chart](screenshots/verification-chart.png)
 
 That looks backwards, since verification should reduce risk, not predict it. But the verified group itself turned out to have a riskier profile to begin with: higher average loan amounts, higher debt-to-income ratios, and lower average income than unverified applicants. That's likely why they got flagged for verification in the first place, not the other way around — verification isn't reducing risk, it's confirming risk that was already there. For a lender, that means "verified" shouldn't be treated as a positive signal in any risk model.
 
 Default rate didn't rise cleanly with debt-to-income either.
 
-![DTI Analysis](dti-chart.png)
+![DTI Chart](screenshots/dti-chart.png)
 
 The highest DTI band (40%+) actually defaulted less than the 30–39.99% band (7.60% vs 15.20%). I checked whether credit score explained the gap, but average FICO was nearly identical across both groups (703 vs 697) — not enough to account for it. It's a real, verified pattern, but the underlying cause isn't clear from this dataset alone and would need further investigation.
 
@@ -32,7 +32,7 @@ The fundamentals held up as expected, which matters as validation: default rate 
 
 Risk also isn't evenly distributed geographically.
 
-![Riskiest States](riskiest-states.png)
+![Riskiest States](screenshots/riskiest-states.png)
 
 Small business loans defaulted at 15.85%, nearly double auto loans (8.17%). And the five highest-default states — Arkansas, Alabama, Louisiana, Oklahoma, Mississippi — were all lower-volume states in the 12.6–13% range, while high-volume states like New York had a lower rate (~11.7%) but far greater total dollar exposure simply due to scale.
 
